@@ -1,0 +1,25 @@
+<h1>Users#new</h1>
+<p>Find me in app/views/users/new.html.erb</p>
+
+<%= form_with(model: @user) do |form| %>
+
+    <div class="field">
+        <%= form.label :name %><br />
+        <%= form.text_field :name, autofocus: true, autocomplete: "first_name" %>
+    </div>
+
+    <div class="field">
+        <%= form.label :email %><br />
+        <%= form.text_field :email, autocomplete: "last_name" %>
+    </div>
+
+    <div class="field">
+        <%= form.label :password %><br />
+        <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: 'Contraseña' %>
+    </div>
+
+    <div class="actions">
+        <%= form.submit "Sign up" %>
+    </div>
+    
+<% end %>
